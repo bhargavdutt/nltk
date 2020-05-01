@@ -230,7 +230,7 @@ class GenericCoreNLPParser(ParserI, TokenizerI, TaggerI):
             )
         )
 
-    def api_call(self, data, properties=None, timeout=60):
+    def api_call(self, data, properties=None, timeout=240):
         default_properties = {
             "outputFormat": "json",
             "annotators": "tokenize,pos,lemma,ssplit,{parser_annotator}".format(
